@@ -425,15 +425,16 @@
         </nav>
     </footer>
 
-    <!-- Funciones -->
+    <!-- // Funciones -->
     <script>
         const menuBtn = document.getElementById('menuBtn');
         const menu = document.getElementById('menu');
-
+        let isMouseOverMenu = false;
+    
         menuBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
-
+    
         const logo = document.querySelector('a');
         logo.addEventListener('click', () => {
             window.scrollTo({
@@ -441,7 +442,36 @@
                 behavior: 'smooth'
             });
         });
+    
+        // Cerrar el menú cuando se hace clic fuera de él
+        document.addEventListener('click', function(event) {
+            var isClickInsideMenu = menu.contains(event.target);
+            var isClickOnMenuBtn = menuBtn.contains(event.target);
+    
+            if (!isClickInsideMenu && !isClickOnMenuBtn && !menu.classList.contains('hidden') && !isMouseOverMenu) {
+                menu.classList.add('hidden');
+            }
+        });
+    
+        // Cerrar el menú cuando se desplaza la página
+        window.addEventListener('scroll', function() {
+            if (!menu.classList.contains('hidden') && !isMouseOverMenu) {
+                menu.classList.add('hidden');
+            }
+        });
+    
+        // Detectar si el mouse está sobre el menú
+        menu.addEventListener('mouseover', function() {
+            isMouseOverMenu = true;
+        });
+    
+        menu.addEventListener('mouseout', function() {
+            isMouseOverMenu = false;
+        });
     </script>
+    
+    
+    
 </body>
 
 </html>
