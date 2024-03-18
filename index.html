@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Landing Page</title>
+    <!-- Incluir los estilos de Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body style="color: #d5ff00; background-color: #252a2d;">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 flex justify-between items-center shadow-md py-4"
+        style="color: #d5ff00; background-color: #252a2d;">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <svg width="80" height="80" viewBox="40 40" xmlns="http://www.w3.org/2000/svg"
+                    class="inline-block fill-current" style="color: #d5ff00;">
+                    <g transform="translate(0.000000,84.000000) scale(0.100000,-0.100000)">
+                        <path
+                            d="M344 780 c-107 -22 -212 -110 -261 -215 -37 -81 -38 -203 -4 -282 13 -29 28 -53 32 -53 5 0 -1 19 -13 42 -20 37 -23 58 -23 148 0 96 3 110 28 158 60 114 162 182 284 190 105 7 134 -1 161 -46 34 -55 79 -82 136 -82 40 0 53 5 78 31 l31 30 -77 40 c-54 28 -89 39 -119 39 l-42 -1 28 -24 c36 -32 27 -32 -26 -1 -48 28 -147 40 -213 26z"
+                            transform="scale(1)" />
+                        <path
+                            d="M252 693 c-54 -54 -104 -142 -123 -216 -18 -75 -6 -73 51 8 87 123 65 127 272 -48 226 -192 213 -183 243 -169 18 9 25 19 25 41 0 31 20 15 -318 263 l-93 69 18 29 c17 29 17 31 -4 51 l-21 22 -50 -50z m68 3 c0 -8 -4 -18 -10 -21 -5 -3 -10 -19 -10 -35 0 -23 -5 -30 -29 -35 -20 -4 -42 -24 -72 -66 -24 -33 -45 -56 -47 -51 -7 21 50 124 94 172 47 50 74 63 74 36z m114 -167 c104 -78 107 -81 91 -99 -17 -19 -20 -17 -114 62 -53 45 -100 85 -105 89 -9 8 0 29 12 29 4 0 56 -37 116 -81z m166 -124 c19 -23 -12 -55 -37 -39 -29 18 -38 41 -24 58 14 17 37 10 61 -19z m72 -51 c40 -28 46 -42 26 -62 -18 -18 -30 -15 -71 19 -36 30 -37 32 -21 50 22 24 21 24 66 -7z"
+                            transform="scale(1)" />
+                        <path
+                            d="M160 332 l0 -68 74 -31 75 -31 25 39 c14 21 26 42 26 46 -1 10 -174 113 -189 113 -7 0 -11 -26 -11 -68z m108 -2 c39 -23 72 -44 72 -47 0 -3 -9 -18 -20 -33 l-20 -28 -60 25 -60 26 0 54 c0 30 3 52 8 50 4 -2 40 -23 80 -47z"
+                            transform="scale(1)" />
+                        <path
+                            d="M720 615 c0 -3 10 -25 23 -48 19 -36 22 -57 22 -147 0 -94 -3 -110 -27 -155 -60 -114 -165 -185 -285 -193 -106 -7 -135 1 -158 44 -49 91 -170 117 -225 47 l-20 -26 75 -38 c73 -38 155 -53 155 -29 0 6 -3 10 -7 10 -5 0 -19 10 -33 21 -17 14 -7 11 32 -9 71 -37 139 -47 215 -32 76 16 125 42 183 96 91 85 133 209 110 326 -6 34 -21 79 -31 100 -18 34 -29 47 -29 33z"
+                            transform="scale(1)" />
+                    </g>
+                </svg>
+            </a>
+
+            <!-- Menu Hamburguesa -->
+            <div class="md:hidden relative">
+                <button id="menuBtn" class="hover:text-white focus:outline-none" style="color: #d5ff00;">
+                    <svg class="h-10 w-10 fill-current" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M3 5h18a1 1 0 0 1 0 2H3a1 1 0 1 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2zm0 6h18a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+                <div id="menu" class="hidden right-0 mt-2 py-2 rounded shadow-lg fixed"
+                    style="color: #d5ff00; background-color: #252a2d;">
+                    <a href="#sobre-nosotros" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Sobre
+                        nosotros</a>
+                    <a href="#nuestro-equipo" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Nuestro
+                        equipo</a>
+                    <a href="#informacion"
+                        class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Informacion</a>
+                    <a href="#galeria" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Galeria de
+                        imagenes</a>
+                    <a href="#detalles" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Detalles</a>
+                    <a href="#aliados" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Aliados</a>
+                    <a href="#portafolio" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Portafolio</a>
+                    <a href="#mapa" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Mapa de
+                        ubicacion</a>
+                    <a href="#contacto" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-white">Contacto</a>
+                </div>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#sobre-nosotros" class="px-4" style="color: #d5ff00;">Sobre nosotros</a>
+                <a href="#nuestro-equipo" class="px-4" style="color: #d5ff00;">Nuestro equipo</a>
+                <a href="#informacion" class="px-4" style="color: #d5ff00;">Informacion</a>
+                <a href="#galeria" class="px-4" style="color: #d5ff00;">Galeria de imagenes</a>
+                <a href="#detalles" class="px-4" style="color: #d5ff00;">Detalles</a>
+                <a href="#portafolio" class="px-4" style="color: #d5ff00;">Portafolio</a>
+                <a href="#mapa" class="px-4" style="color: #d5ff00;">Mapa de ubicacion</a>
+                <a href="#contacto" class="px-4" style="color: #d5ff00;">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 80px;"></div> <!-- Ajusta la altura según la altura real de tu navbar -->
+
+    <!-- Hero section -->
+    <section id="sobre-nosotros" style="color: #d5ff00; background-color: #252a2d;">
+        <!-- Sobre Nosotros-->
+        <div class="h-full flex items-center">
+            <div class="bg-cover bg-center py-32 w-full"
+                style="background-image: url('./img/1.jpeg'); filter: brightness(0.90);">
+                <div class="container mx-auto text-left text-white">
+                    <div class="flex flex-col lg:flex-row items-center">
+                        <div class="lg:w-1/2 mb-8 lg:mb-0">
+                            <h1 class="text-4xl font-bold mb-8 m-10 text-center" style="color: #d5ff00;">EcoSurvey Consulting
+                            </h1>
+                            <p class="text-lg font-bold text-center text-white bg-black bg-opacity-50 p-2">"Por un mundo
+                                sostenible, confía en Ecosurvey Consulting"</p>
+                        </div>
+                        <div class="lg:w-1/2 pl-16 rounded-xl shadow-md">
+                            <img src="./img/2.jpeg" class="h-64 w-full object-cover rounded-xl lg:h-auto lg:w-full"
+                                alt="Layout Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-20">
+                <!-- Parte izquierda con imagen -->
+                <div style="align-self: center;">
+                    <img src="./img/7.jpeg" class="h-auto w-full object-cover rounded-xl shadow-md" alt="Imagen"
+                        style="max-width: 100%;">
+                </div>
+                <!-- Texto -->
+                <div class="p-8 flex items-center justify-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-8" style="color: #d5ff00;">Sobre nosotros</h2>
+                        <p class="text-lg text-gray-300 mb-2 m-5 ">Ecosurvey Consulting: Expertos en minería sostenible
+                            y protección del medio ambiente La industria minera es una de las principales actividades
+                            económicas en muchos países alrededor del mundo. Sin embargo, también es una de las más
+                            impactantes en términos ambientales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo section -->
+    <section id="nuestro-equipo" class="py-20 mx-10 my-5" style="color: #d5ff00; background-color: #252a2d;">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-8 m-10">Nuestro equipo</h1>
+            <!-- Grid de equipo -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <!-- Card de miembro del equipo -->
+                <div class="rounded-lg p-4" style="color: #d5ff00; background-color: #fef6f883;">
+                    <img src="./img/P1.jpg" alt="Nombre del miembro" class="rounded-full h-24 w-24 mx-auto mb-4">
+                    <h2 class="text-xl font-bold mb-2" style="color: #d5ff00;">Pamela R Johnson</h2>
+                    <p class="text-sm " style="color: #d5ff00;">CEO INGENIERA GEOLOGA</p>
+                </div>
+                <div class="rounded-lg p-4" style="color: #d5ff00; background-color: #fef6f883;">
+                    <img src="./img/P2.jpg" alt="Nombre del miembro" class="rounded-full h-24 w-24 mx-auto mb-4">
+                    <h2 class="text-xl font-bold mb-2" style="color: #d5ff00;">Steven B Lack</h2>
+                    <p class="text-sm " style="color: #d5ff00;">INGENIERO AMBIENTAL</p>
+                </div>
+                <div class="rounded-lg p-4" style="color: #d5ff00; background-color: #fef6f883;">
+                    <img src="./img/P3.jpg" alt="Nombre del miembro" class="rounded-full h-24 w-24 mx-auto mb-4">
+                    <h2 class="text-xl font-bold mb-2" style="color: #d5ff00;">Alexander S Hoffman</h2>
+                    <p class="text-sm " style="color: #d5ff00;">GEOLGOGO SIG</p>
+                </div>
+                <div class="rounded-lg p-4" style="color: #d5ff00; background-color: #fef6f883;">
+                    <img src="./img/P4.jpg" alt="Nombre del miembro" class="rounded-full h-24 w-24 mx-auto mb-4">
+                    <h2 class="text-xl font-bold mb-2" style="color: #d5ff00;">Martin F Kleckner</h2>
+                    <p class="text-sm " style="color: #d5ff00;">INGENIERO GEOLOGO</p>
+                </div>
+                <!-- Agregar más tarjetas de miembros del equipo según sea necesario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Informacion section -->
+    <section id="informacion" class="py-20 mx-10 my-10" style="color: #d5ff00; background-color: #252a2d;">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-8 m-10">Informacion</h1>
+            <p class="text-lg">Contenido de informacion...</p>
+        </div>
+    </section>
+
+    <!-- Galeria de imagenes section -->
+    <section id="galeria" class="py-20 mx-10 my-10" style="color: #d5ff00; background-color: #252a2d;">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-8 m-10">Galeria de imagenes</h1>
+            <!-- Grid de imagenes -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                <!-- Imagen 1 -->
+                <div class="overflow-hidden relative group">
+                    <img src="./img/1.jpeg" alt="Aplicación Hidrogel" class="w-full h-full object-cover"
+                        style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height: 350px;">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+                        <p class="text-lg uppercase font-bold text-center text-white bg-black bg-opacity-50 p-2">
+                            Aplicación Hidrogel</p>
+                    </div>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="overflow-hidden relative group">
+                    <img src="./img/2.jpeg" alt="Revegetación" class="w-full h-full object-cover"
+                        style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height: 350px;">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+                        <p class="text-lg uppercase font-bold text-center text-white bg-black bg-opacity-50 p-2">
+                            Revegetación</p>
+                    </div>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="overflow-hidden relative group">
+                    <img src="./img/3.jpeg" alt="Energías Limpias" class="w-full h-full object-cover"
+                        style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height: 350px;">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+                        <p class="text-lg uppercase font-bold text-center text-white bg-black bg-opacity-50 p-2">
+                            Energías Limpias</p>
+                    </div>
+                </div>
+                <!-- Imagen 4 -->
+                <div class="overflow-hidden relative group">
+                    <img src="./img/4.jpeg" alt="Reforestación" class="w-full h-full object-cover"
+                        style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height: 350px;">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+                        <p class="text-lg uppercase font-bold text-center text-white bg-black bg-opacity-50 p-2">
+                            Reforestación</p>
+                    </div>
+                </div>
+                <!-- Imagen 5 -->
+                <div class="overflow-hidden relative group">
+                    <img src="./img/5.jpeg" alt=" Minería  Sustentable" class="w-full h-full object-cover"
+                        style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height: 350px;">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+                        <p class="text-lg uppercase font-bold text-center text-white bg-black bg-opacity-50 p-2">
+                            Minería Sustentable</p>
+                    </div>
+                </div>
+                <!-- Imagen 6 -->
+                <div class="overflow-hidden relative group">
+                    <img src="./img/6.jpeg" alt="Zonificación Ambiental" class="w-full h-full object-cover"
+                        style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height: 350px;">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+                        <p class="text-lg uppercase font-bold text-center text-white bg-black bg-opacity-50 p-2">
+                            Zonificación Ambiental</p>
+                    </div>
+                </div>
+                <!-- Imagen 7 -->
+                <div class="overflow-hidden relative group">
+                    <img src="./img/7.jpeg" alt="Crece con nosotros" class="w-full h-full object-cover"
+                        style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height: 350px;">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
+                        <p class="text-lg uppercase font-bold text-center text-white bg-black bg-opacity-50 p-2">
+                            Crece con nosotros</p>
+                    </div>
+                </div>
+                <!-- Agregar más imágenes según sea necesario -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles section -->
+    <section id="detalles" class="py-20 mx-10 my-10" style="color: #d5ff00; background-color: #252a2d;">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-8 m-10">Detalles</h1>
+            <p class="text-lg">Contenido de detalles...</p>
+        </div>
+    </section>
+
+    <!-- Seccion ALIADOS -->
+    <section id="aliados" class="py-20 mx-10 my-10" style="color: #d5ff00; background-color: #252a2d;">
+        <h2 class="text-4xl font-bold mb-8 text-center m-10">Nuestros Aliados</h2>
+
+        <!-- Primera barra -->
+        <div class="overflow-hidden">
+            <div class="flex justify-start space-x-8 animate-marquee">
+                <!-- Logos de empresas aliadas -->
+                <img src="./img/a1.png" alt="Logo 1" class="w-32 h-auto">
+                <img src="./img/a2.png" alt="Logo 2" class="w-32 h-auto">
+                <img src="./img/a3.png" alt="Logo 3" class="w-32 h-auto">
+                <img src="./img/a4.png" alt="Logo 4" class="w-32 h-auto">
+                <img src="./img/a5.png" alt="Logo 5" class="w-32 h-auto">
+                <img src="./img/a5.png" alt="Logo 5" class="w-32 h-auto">
+                <img src="./img/a5.png" alt="Logo 5" class="w-32 h-auto">
+                <img src="./img/a5.png" alt="Logo 5" class="w-32 h-auto">
+                <img src="./img/a5.png" alt="Logo 5" class="w-32 h-auto">
+            </div>
+        </div>
+
+        <!-- Segunda barra -->
+        <div class="overflow-hidden mt-8">
+            <div class="flex justify-end space-x-8 animate-marquee-reverse">
+                <!-- Logos de empresas aliadas -->
+                <img src="./img/a1.png" alt="Logo 7" class="w-32 h-auto">
+                <img src="./img/a2.png" alt="Logo 8" class="w-32 h-auto">
+                <img src="./img/a3.png" alt="Logo 9" class="w-32 h-auto">
+                <img src="./img/a4.png" alt="Logo 10" class="w-32 h-auto">
+                <img src="./img/a5.png" alt="Logo 11" class="w-32 h-auto">
+
+            </div>
+        </div>
+
+    </section>
+    <style>
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes marquee-reverse {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        .animate-marquee-reverse {
+            animation: marquee-reverse 20s linear infinite;
+        }
+    </style>
+
+<!-- Portafolio -->
+<section id="portafolio" class="py-20 mx-10 my-10" style="color: #d5ff00; background-color: #252a2d;">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-8 m-10">Portafolio</h2>
+        <div class="flex justify-center items-center mt-20 mx-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <!-- Parte izquierda con imagen -->
+                <div class="lg:self-center">
+                    <img src="./img/4.jpeg" class="h-auto w-full object-cover rounded-xl shadow-md" alt="Imagen"
+                        style="max-width: 100%;">
+                </div>
+                <!-- Texto -->
+                <div class="lg:flex lg:items-center lg:justify-center lg:p-8 whitespace-normal"> <!-- Agrega la clase whitespace-normal aquí -->
+                    <div>
+                        <h2 class="text-4xl font-bold mb-8" style="color: #d5ff00;">Soluciones Eco-amigables</h2>
+                        <p class="text-lg text-gray-300 mb-2 m-5 "><span style="color: #d5ff00;"> > </span>Ofrecemos
+                            soluciones personalizadas y sostenibles,
+                            que equilibran la necesidad de producir con el respeto y cuidado de la Tierra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Parte inferior - Texto al frente de la imagen -->
+        <div class="flex flex-col lg:flex-row justify-center items-center mt-20 mx-20">
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl font-bold mb-8" style="color: #d5ff00;">Estudio de Impacto Ambiental en
+                    Proyectos Mineros</h2>
+                <p class="text-lg text-gray-200 mb-2 m-10"> <span style="color: #d5ff00;"> > </span>El Estudio de
+                    Impacto Ambiental (EIA) es un elemento
+                    fundamental en la
+                    planificación y desarrollo de proyectos mineros. Su importancia radica en su capacidad para evaluar
+                    los posibles efectos que la actividad minera puede tener sobre el medio ambiente y en la
+                    identificación de medidas de mitigación y prevención.
+                    La historia del EIA en proyectos mineros se remonta a finales del siglo XIX, cuando el creciente
+                    interés por la expl</p>
+            </div>
+            <img src="./img/7.jpeg" alt="Imagen 2" class="h-auto w-full lg:w-1/2 object-cover rounded-xl shadow-md"
+                style="max-width: 100%;">
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Ubicacion -->
+    <section id="mapa"  class="pt-20" style="color: #d5ff00; background-color: #252a2d;">
+        <h2 class="text-4xl font-bold mb-8 m-10 text-center" style="color: #d5ff00; background-color: #252a2d;">Ubicación</h2>
+        <div class="relative h-96 overflow-hidden">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.1552574667998!2d-75.5226810491345!3d5.057868697358705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e396bf7fa6ba6d7%3A0xbdb61e2b9dfc826e!2sBarrio%20Caribe%2C%20Manizales%2C%20Caldas%2C%20Colombia!5e0!3m2!1sen!2sus!4v1647338008713!5m2!1sen!2sus"
+                width="100%" height="100%" style="position: absolute; top: 0; left: 0; filter: grayscale(90%);"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer footer-center p-10 mb-0 mx-10 my-10 text-center"
+        style="color: #d5ff00; background-color: #252a2d;">
+        <aside class="flex flex-col items-center justify-center">
+            <svg width="80" height="80" viewBox="40 40" xmlns="http://www.w3.org/2000/svg"
+                class="inline-block fill-current" style="color: #d5ff00;">
+                <g transform="translate(0.000000,84.000000) scale(0.100000,-0.100000)">
+                    <path
+                        d="M344 780 c-107 -22 -212 -110 -261 -215 -37 -81 -38 -203 -4 -282 13 -29 28 -53 32 -53 5 0 -1 19 -13 42 -20 37 -23 58 -23 148 0 96 3 110 28 158 60 114 162 182 284 190 105 7 134 -1 161 -46 34 -55 79 -82 136 -82 40 0 53 5 78 31 l31 30 -77 40 c-54 28 -89 39 -119 39 l-42 -1 28 -24 c36 -32 27 -32 -26 -1 -48 28 -147 40 -213 26z"
+                        transform="scale(1)" />
+                    <path
+                        d="M252 693 c-54 -54 -104 -142 -123 -216 -18 -75 -6 -73 51 8 87 123 65 127 272 -48 226 -192 213 -183 243 -169 18 9 25 19 25 41 0 31 20 15 -318 263 l-93 69 18 29 c17 29 17 31 -4 51 l-21 22 -50 -50z m68 3 c0 -8 -4 -18 -10 -21 -5 -3 -10 -19 -10 -35 0 -23 -5 -30 -29 -35 -20 -4 -42 -24 -72 -66 -24 -33 -45 -56 -47 -51 -7 21 50 124 94 172 47 50 74 63 74 36z m114 -167 c104 -78 107 -81 91 -99 -17 -19 -20 -17 -114 62 -53 45 -100 85 -105 89 -9 8 0 29 12 29 4 0 56 -37 116 -81z m166 -124 c19 -23 -12 -55 -37 -39 -29 18 -38 41 -24 58 14 17 37 10 61 -19z m72 -51 c40 -28 46 -42 26 -62 -18 -18 -30 -15 -71 19 -36 30 -37 32 -21 50 22 24 21 24 66 -7z"
+                        transform="scale(1)" />
+                    <path
+                        d="M160 332 l0 -68 74 -31 75 -31 25 39 c14 21 26 42 26 46 -1 10 -174 113 -189 113 -7 0 -11 -26 -11 -68z m108 -2 c39 -23 72 -44 72 -47 0 -3 -9 -18 -20 -33 l-20 -28 -60 25 -60 26 0 54 c0 30 3 52 8 50 4 -2 40 -23 80 -47z"
+                        transform="scale(1)" />
+                    <path
+                        d="M720 615 c0 -3 10 -25 23 -48 19 -36 22 -57 22 -147 0 -94 -3 -110 -27 -155 -60 -114 -165 -185 -285 -193 -106 -7 -135 1 -158 44 -49 91 -170 117 -225 47 l-20 -26 75 -38 c73 -38 155 -53 155 -29 0 6 -3 10 -7 10 -5 0 -19 10 -33 21 -17 14 -7 11 32 -9 71 -37 139 -47 215 -32 76 16 125 42 183 96 91 85 133 209 110 326 -6 34 -21 79 -31 100 -18 34 -29 47 -29 33z"
+                        transform="scale(1)" />
+                </g>
+            </svg>
+
+            <p class="text-4xl font-bold mb-8 text-center">
+                EcoSurvey. <br>Siempre ecofriendly.
+            </p>
+            <p class="mb-4">&copy; 2024 EcoSurvey Consulting - All rights reserved</p>
+        </aside>
+        <nav class="flex items-center justify-center">
+            <div class="grid grid-flow-col gap-4">
+                <!-- tw -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="fill-current"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg></a>
+                <!-- yt -->
+                <a href="https://www.youtube.com/@OnfeVS" target="_blank" rel="noopener noreferrer"
+                    class="fill-current"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                        </path>
+                    </svg></a>
+                <!-- fb -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="fill-current"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg></a>
+            </div>
+        </nav>
+    </footer>
+
+    <!-- Funciones -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const logo = document.querySelector('a');
+        logo.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
