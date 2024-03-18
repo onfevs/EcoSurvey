@@ -4,9 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Landing Page</title>
+    <title>EcoSurvey Consulting</title>
     <!-- Incluir los estilos de Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Etiqueta para el favicon -->
+    <link rel="icon" href="./svg/logo.svg" type="image/svg+xml">
+
+    <!-- Etiquetas para mejorar el SEO -->
+    <meta name="description"
+        content="Landing Page para EcoSurvey, empresa de consultoría ambiental en la industria minera.">
+    <meta name="keywords"
+        content="EcoSurvey, consultoría ambiental, industria minera, sostenibilidad, protección del medio ambiente, minería sostenible">
+    <meta name="author" content="Jorge A Vallejo (OnfeVS)">
+
+    <!-- Etiqueta para indicar que el sitio es responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Etiqueta para indicar el idioma principal del contenido -->
+    <meta http-equiv="Content-Language" content="es">
+
+    <!-- Etiqueta para indicar el tipo de contenido de la página -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- Etiqueta para establecer el título que aparece en la barra de navegación -->
+    <meta name="title" content="EcoSurvey Consulting">
+
+    <!-- Etiqueta Open Graph para mejorar la visualización en redes sociales -->
+    <meta property="og:title" content="EcoSurvey Consulting">
+    <meta property="og:description"
+        content="Landing Page para EcoSurvey, empresa de consultoría ambiental en la industria minera.">
+    <meta property="og:image" content="URL de la imagen relacionada con tu página">
+    <meta property="og:url" content="URL de tu página">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Etiqueta Twitter Card para mejorar la visualización en Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@usuarioTwitter">
+    <meta name="twitter:creator" content="@usuarioTwitter">
+    <meta name="twitter:title" content="EcoSurvey Consulting">
+    <meta name="twitter:description"
+        content="Landing Page para EcoSurvey, empresa de consultoría ambiental en la industria minera.">
+    <meta name="twitter:image" content="URL de la imagen relacionada con tu página">
 </head>
 
 <body style="color: #d5ff00; background-color: #252a2d;">
@@ -430,11 +470,11 @@
         const menuBtn = document.getElementById('menuBtn');
         const menu = document.getElementById('menu');
         let isMouseOverMenu = false;
-    
+
         menuBtn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
-    
+
         const logo = document.querySelector('a');
         logo.addEventListener('click', () => {
             window.scrollTo({
@@ -442,36 +482,34 @@
                 behavior: 'smooth'
             });
         });
-    
+
         // Cerrar el menú cuando se hace clic fuera de él
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             var isClickInsideMenu = menu.contains(event.target);
             var isClickOnMenuBtn = menuBtn.contains(event.target);
-    
+
             if (!isClickInsideMenu && !isClickOnMenuBtn && !menu.classList.contains('hidden') && !isMouseOverMenu) {
                 menu.classList.add('hidden');
             }
         });
-    
+
         // Cerrar el menú cuando se desplaza la página
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (!menu.classList.contains('hidden') && !isMouseOverMenu) {
                 menu.classList.add('hidden');
             }
         });
-    
+
         // Detectar si el mouse está sobre el menú
-        menu.addEventListener('mouseover', function() {
+        menu.addEventListener('mouseover', function () {
             isMouseOverMenu = true;
         });
-    
-        menu.addEventListener('mouseout', function() {
+
+        menu.addEventListener('mouseout', function () {
             isMouseOverMenu = false;
         });
     </script>
-    
-    
-    
+
 </body>
 
 </html>
